@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        //数组解构赋值
+        const arr = [1,2,3];
+
+        let [a,b,c] = arr;
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+
+        //对象解构赋值
+        const p = {
+            name: "jack",
+            age: 21,
+            language:['java','js','css']
+        }
+
+        let {name,age,language} = p;
+        console.log(name);
+        console.log(age);
+        console.log(language);
+
+        //字符串扩展
+        let str = "hello.vue";
+        console.log(str.startsWith("hello"));
+        console.log(str.endsWith("vue"));
+        console.log(str.includes("."));
+        console.log(str.includes("he"));
+
+        //字符串模板
+        let s = `
+            <div>
+                多行字符串
+            </div>
+        `;
+        console.log(s);
+
+        let info = `我是${name},今年${age}岁了`;
+        console.log(info);
+
+        function fun() {
+            return "这是一个函数";
+        }
+
+        info = `我是${name},今年${age}岁了，我想说${fun()}`;
+        console.log(info);
+
+    </script>
+</body>
+</html>

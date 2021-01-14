@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //数组中新增了map、reduce方法
+        //map()用于接收一个函数，将原数组中所有的元素用这个函数处理后放入新数组返回
+        let arr = ['1','20','-5','3'];
+
+        arr = arr.map(a =>{
+            return a*2;
+        })
+
+        console.log(arr);
+
+
+        arr = arr.reduce((a,b) => {
+            console.log("上一次处理后:"+a);
+            console.log("当前使用:"+b);
+            return a+b;
+        },100)
+
+        console.log(arr);
+
+    </script>
+</body>
+</html>

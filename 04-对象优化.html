@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const p = {
+            name:'jack',
+            age:18,
+            language:['java','js','css']
+        }
+
+        console.log(Object.keys(p));
+        console.log(Object.values(p));
+        console.log(Object.entries(p));
+
+
+        const target = {a:1};
+        const source1 = {b:2};
+        const source2 = {c:3};
+
+        Object.assign(target,source1,source2);
+
+        console.log(target);
+
+        //声明对象的简写方式
+
+        const name = 'hello';
+        const age = 18;
+
+        const o1 = {name:name,age:age};
+        console.log(o1);
+
+        //属性名和变量名一样，可以简写
+        const o2 = {name,age};
+        console.log(o2);
+
+        //对象函数属性的简写
+        let p3 = {
+            name:'jack',
+            eat: function (food) {
+                console.log(`${this.name}在吃${food}`);
+            },
+            //箭头函数this不能使用
+            eat2: food => console.log(`${p3.name}在吃${food}`),
+            eat3(food) {
+                console.log(`${this.name}在吃${food}`);
+            }
+        }
+
+        p3.eat('hello');
+        p3.eat2('hello');
+        p3.eat3('hello');
+
+        //对象扩展运算符
+        //对象深拷贝
+        let p4 = {...p3};
+
+        console.log(p4);
+
+        //合并对象
+        let age1 = {age:15};
+        let name1 = {name:'jack'};
+        let p5 = {...name1,...age1};
+        console.log(p5);
+
+
+
+
+
+    </script>
+</body>
+</html>

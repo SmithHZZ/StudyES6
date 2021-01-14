@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //函数参数默认值
+
+        //ES6以前
+        function add(a,b) {
+            b = b || 1;
+            return a + b;
+        }
+
+        console.log(add(10));
+
+        //函数默认值
+        function add2(a,b=1) {
+            return a+b;
+        }
+
+        console.log(add2(10));
+
+        //不定参数
+        function add3(...value) {
+            console.log(value.length);
+        }
+
+        add3(1,2,3);
+        add3(1,2,3,4,5);
+
+        //箭头函数
+        var print = obj => console.log(obj);
+
+        print('hello');
+
+        var sum = (a,b,c) => a+b+c;
+
+        console.log(sum(1,2,3));
+
+        var sum2 = (a,b) => {
+            console.log("test");
+            return a+b;
+        }
+
+        console.log(sum2(1,2));
+
+        //综合实例
+        const p = {
+            name:'jack',
+            age:18,
+            language:['java','js','css']
+        }
+
+        var hello = ({name}) => console.log(`hello,${name}`)
+
+        hello(p);
+
+
+
+    </script>
+</body>
+</html>
